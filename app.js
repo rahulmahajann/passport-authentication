@@ -4,11 +4,11 @@ const app = express()
 
 // ejs
 app.use(expresslayouts)
-app.set('viewengine','ejs')
+app.set('view engine','ejs')
 
 // routes
 app.use('/',require('./routes/index'))
-app.use('/user',require('./routes/user'))
+app.use('/users',require('./routes/users'))
 
 const PORT = process.env.PORT || 5000
 
